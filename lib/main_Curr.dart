@@ -7,7 +7,7 @@ import '10_03_navigations/bottom_navigator_page.dart';
 import '10_03_navigations/first_page.dart';
 import '10_04_stateless_statefull_widget/counter_page.dart';
 import '10_05_user_input/todo_page.dart';
-import '10_06_todo_app.dart/hone_page6.dart';
+import '10_06_todo_app.dart/home_page6.dart';
 
 void main() {
   runApp(const MyApp());

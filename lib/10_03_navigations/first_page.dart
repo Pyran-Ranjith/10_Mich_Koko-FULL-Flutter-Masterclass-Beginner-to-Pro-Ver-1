@@ -4,8 +4,10 @@ import 'package:masterclass_beginner_to_pro/10_03_navigations/home_page.dart';
 import 'package:masterclass_beginner_to_pro/10_03_navigations/profile_page.dart';
 import 'package:masterclass_beginner_to_pro/10_03_navigations/settings_page.dart';
 import 'package:masterclass_beginner_to_pro/10_04_stateless_statefull_widget/counter_page.dart';
+import 'package:masterclass_beginner_to_pro/10_06_todo_app.dart/home_page6_list_view.dart';
 
-import '../10_06_todo_app.dart/hone_page6.dart';
+import '../10_06_todo_app.dart/home_page6.dart';
+import '../10_06_todo_app.dart/home_page6_list_view_builder.dart';
 
 class First_Page extends StatefulWidget {
   // const First_Page({super.key});
@@ -29,6 +31,10 @@ class _First_PageState extends State<First_Page> {
 
   final List _pages = [
     // home page
+    HomePage6ListViewBuilder(),
+    // home page
+    HomePage6ListView(),
+    // home page
     HomePage6(),
     // profile page
     ProfilePage(),
@@ -50,8 +56,9 @@ class _First_PageState extends State<First_Page> {
       ),
 
       drawer: Drawer(
-        backgroundColor: Colors.deepPurple,
-        child: Column(
+        // backgroundColor: Colors.deepPurpleAccent,
+         backgroundColor: Color.fromARGB(166, 255, 230, 0),
+       child: Column(
           children: [
             // common to place a drawer header here
             const DrawerHeader(
@@ -61,10 +68,51 @@ class _First_PageState extends State<First_Page> {
               ),
             ),
 
+            // home page6ListViewBuilder list tile
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home Page-6 ListViewBuilder',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+                // go to home page6
+                Navigator.pushNamed(context, '/homepage6listviewbuilder');
+              },
+            ),
+
+            // home page6ListView list tile
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home Page-6 ListView',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+              onTap: () {
+                // pop drawer first
+                Navigator.pop(context);
+                // go to home page6
+                Navigator.pushNamed(context, '/homepage6listview');
+              },
+            ),
+
             // home page6 list tile
             ListTile(
               leading: const Icon(Icons.home),
-              title: const Text('Home Page-6'),
+              title: const Text('Home Page-6',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
               onTap: () {
                 // pop drawer first
                 Navigator.pop(context);
@@ -76,7 +124,12 @@ class _First_PageState extends State<First_Page> {
             // home page list tile
             ListTile(
               leading: const Icon(Icons.home),
-              title: const Text('Home Page'),
+              title: const Text('Home Page',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
               onTap: () {
                 // pop drawer first
                 Navigator.pop(context);
@@ -88,7 +141,12 @@ class _First_PageState extends State<First_Page> {
             // Bottom Navigator Page list tile
             ListTile(
               leading: const Icon(Icons.arrow_downward),
-              title: const Text('Bottom Navigator Page'),
+              title: const Text('Bottom Navigator Page',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
               onTap: () {
                 // pop drawer first
                 Navigator.pop(context);
@@ -100,7 +158,12 @@ class _First_PageState extends State<First_Page> {
             // counter page list tile
             ListTile(
               leading: const Icon(Icons.countertops),
-              title: const Text("Counter Page"),
+              title: const Text('Counter Page',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
               onTap: () {
                 // go to counter page
                 Navigator.pushNamed(context, '/counterpage');
@@ -110,7 +173,12 @@ class _First_PageState extends State<First_Page> {
             // todo page list tile
             ListTile(
               leading: const Icon(Icons.document_scanner),
-              title: const Text("ToDo Page"),
+              title: const Text('ToDo Page',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
               onTap: () {
                 // go to counter page
                 Navigator.pushNamed(context, '/todopage');
@@ -120,7 +188,12 @@ class _First_PageState extends State<First_Page> {
             // setting page list tile
             ListTile(
               leading: const Icon(Icons.settings),
-              title: const Text("Setting sPage"),
+              title: const Text('Setting sPage',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),),
               onTap: () {
                 // go to setting page
                 Navigator.pushNamed(context, '/settingspage');

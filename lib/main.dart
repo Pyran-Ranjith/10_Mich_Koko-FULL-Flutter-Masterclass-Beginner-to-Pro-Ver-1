@@ -8,7 +8,9 @@ import '10_03_navigations/bottom_navigator_page.dart';
 import '10_03_navigations/first_page.dart';
 import '10_04_stateless_statefull_widget/counter_page.dart';
 import '10_05_user_input/todo_page.dart';
-import '10_06_todo_app.dart/hone_page6.dart';
+import '10_06_todo_app.dart/home_page6.dart';
+import '10_06_todo_app.dart/home_page6_list_view.dart';
+import '10_06_todo_app.dart/home_page6_list_view_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +43,9 @@ class MyApp extends StatelessWidget {
         '/counterpage' :(context) => const CounterPage(),
         '/todopage' :(context) => const ToDoPage(),
         '/homepage6' :(context) => const HomePage6(),
+        '/homepage6listview' :(context) => const HomePage6ListView(),
+        '/homepage6listviewbuilder' :(context) => const HomePage6ListViewBuilder(),
+
       },
  );
   }

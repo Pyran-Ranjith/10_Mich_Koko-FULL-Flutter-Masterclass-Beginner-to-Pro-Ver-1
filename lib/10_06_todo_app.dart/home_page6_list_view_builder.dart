@@ -3,18 +3,19 @@ import 'package:flutter/material.dart';
 
 import 'util/todo_tile.dart';
 
-class HomePage6 extends StatefulWidget {
-  const HomePage6({super.key});
+class HomePage6ListViewBuilder extends StatefulWidget {
+  const HomePage6ListViewBuilder({super.key});
 
   @override
-  State<HomePage6> createState() => _HomePage6State();
+  State<HomePage6ListViewBuilder> createState() =>
+      _HomePage6ListViewBuilderState();
 }
 
-class _HomePage6State extends State<HomePage6> {
+class _HomePage6ListViewBuilderState extends State<HomePage6ListViewBuilder> {
   // list of todo task
   List toDoList = [
-    ["Make Tutorial", true],
-    ["Do ExerciseYYY", false],
+    ["HomePage6ListView", true],
+    ["Do Exercise", false],
   ];
   @override
   Widget build(BuildContext context) {
@@ -24,26 +25,10 @@ class _HomePage6State extends State<HomePage6> {
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         backgroundColor: Colors.yellow[200],
         // title: Center(child: Text("Home Page-6")),
-        title: Center(child: Text("To Do")),
+        title: Center(child: Text("To-Do Using ListViewBuilder Wiget")),
         elevation: 0,
       ),
-
-      // body: Center(child: Text("Home Page-6"))
-
-      body:
-          // // Using LiistView
-          // ListView(
-          //   children: [
-          //     TodoTile(
-          //       taskName: "Make Tutorial",
-          //       taskCompleated: true,
-          //       onChanged: (p0) {},
-          //     ),
-          //   ],
-          // ),
-
-          // // Using LiistView Builder
-          ListView.builder(
+      body: ListView.builder(
         itemCount: toDoList.length,
         itemBuilder: (context, index) {
           return TodoTile(
